@@ -9,8 +9,8 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Users List</h6>
-      <a href="{{route('users.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add User</a>
+      <h6 class="m-0 font-weight-bold text-primary float-left">Danh sách người dùng</h6>
+      <a href="{{route('users.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Thêm người dùng</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -18,16 +18,16 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Name</th>
+              <th>Tên</th>
               <th>Email</th>
-              <th>Photo</th>
-              <th>Join Date</th>
-              <th>Role</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>Ảnh</th>
+              <th>Ngày tạo</th>
+              <th>Vai trò</th>
+              <th>Trạng thái</th>
+              <th>Hoạt động</th>
             </tr>
           </thead>
-          <tfoot>
+          {{-- <tfoot>
             <tr>
                 <th>S.N.</th>
                 <th>Name</th>
@@ -38,7 +38,7 @@
                 <th>Status</th>
                 <th>Action</th>
               </tr>
-          </tfoot>
+          </tfoot> --}}
           <tbody>
             @foreach($users as $user)   
                 <tr>
@@ -148,8 +148,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: "Bạn có chắc?",
+                    text: "Sau khi xóa, bạn sẽ không thể khôi phục dữ liệu này!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -158,7 +158,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal("Dữ liệu của bạn an toàn!");
                     }
                 });
           })
