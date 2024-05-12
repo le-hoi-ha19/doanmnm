@@ -9,8 +9,8 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Banners List</h6>
-      <a href="{{route('banner.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Banner</a>
+      <h6 class="m-0 font-weight-bold text-primary float-left">Danh sách Banners</h6>
+      <a href="{{route('banner.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Thêm Banner</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -19,23 +19,13 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Title</th>
+              <th>Tiêu đề</th>
               <th>Slug</th>
-              <th>Photo</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>Ảnh</th>
+              <th>Trạng thái</th>
+              <th>Hành động</th>
             </tr>
           </thead>
-          <tfoot>
-            <tr>
-              <th>S.N.</th>
-              <th>Title</th>
-              <th>Slug</th>
-              <th>Photo</th>
-              <th>Status</th>
-              <th>Action</th>
-              </tr>
-          </tfoot>
           <tbody>
             @foreach($banners as $banner)   
                 <tr>
@@ -90,7 +80,7 @@
         </table>
         <span style="float:right">{{$banners->links()}}</span>
         @else
-          <h6 class="text-center">No banners found!!! Please create banner</h6>
+          <h6 class="text-center">Không có Banners nào được tìm thấy!!! vui lòng tạo banner</h6>
         @endif
       </div>
     </div>
@@ -153,8 +143,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: "Bạn chắc chứ?",
+                    text: "Khi xóa banner này bạn không thể khôi phục nó!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -163,7 +153,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal("Banner an toàn!");
                     }
                 });
           })

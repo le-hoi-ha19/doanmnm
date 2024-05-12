@@ -9,8 +9,8 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Post Tag Lists</h6>
-      <a href="{{route('post-tag.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Post Tag</a>
+      <h6 class="m-0 font-weight-bold text-primary float-left">Danh sách Tag</h6>
+      <a href="{{route('post-tag.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Thêm Tag</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -19,21 +19,12 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Title</th>
+              <th>Tiêu đề</th>
               <th>Slug</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>Trạng thái</th>
+              <th>Hành động</th>
             </tr>
           </thead>
-          <tfoot>
-            <tr>
-              <th>S.N.</th>
-              <th>Title</th>
-              <th>Slug</th>
-              <th>Status</th>
-              <th>Action</th>
-              </tr>
-          </tfoot>
           <tbody>
             @foreach($postTags as $data)   
                 <tr>
@@ -61,7 +52,7 @@
         </table>
         <span style="float:right">{{$postTags->links()}}</span>
         @else
-          <h6 class="text-center">No Post Tag found!!! Please create post tag</h6>
+          <h6 class="text-center">Không có Tag nào được tìm thấy!!! Vui lòng tạo một tag</h6>
         @endif
       </div>
     </div>
@@ -117,8 +108,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: "Bạn chắc chứ?",
+                    text: "Khi mà xóa dữ liệu thì không thể khôi phục!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -127,7 +118,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal("Dữ liệu đã được an toàn!");
                     }
                 });
           })

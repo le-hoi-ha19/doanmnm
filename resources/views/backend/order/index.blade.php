@@ -18,8 +18,8 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Đơn hàng.</th>
-              <th>Tên</th>
+              <th>Mã đơn hàng.</th>
+              <th>Tên khách hàng</th>
               <th>Email</th>
               <th>Số lượng</th>
               <th>Phí</th>
@@ -28,19 +28,6 @@
               <th>Hoạt động</th>
             </tr>
           </thead>
-          <tfoot>
-            <tr>
-              <th>S.N.</th>
-              <th>Đơn hàng.</th>
-              <th>Tên</th>
-              <th>Email</th>
-              <th>Số lượng</th>
-              <th>Phí</th>
-              <th>Tổng cộng</th>
-              <th>Trạng thái</th>
-              <th>Hoạt động</th>
-              </tr>
-          </tfoot>
           <tbody>
             @foreach($orders as $order)  
             @php
@@ -136,8 +123,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: "Bạn chắc chứ?",
+                    text: "khi xóa thì dữ liệu không thể khôi phục!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -146,7 +133,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal("Dữ liệu bạn đã an toàn!");
                     }
                 });
           })
