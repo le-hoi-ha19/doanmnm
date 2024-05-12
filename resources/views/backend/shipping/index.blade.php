@@ -9,8 +9,8 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Shipping List</h6>
-      <a href="{{route('shipping.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Shipping</a>
+      <h6 class="m-0 font-weight-bold text-primary float-left">Danh sách vận chuyển</h6>
+      <a href="{{route('shipping.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Thêm vận chuyển</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -19,19 +19,19 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Title</th>
-              <th>Price</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>Tiêu đề</th>
+              <th>Giá</th>
+              <th>Trạng thái</th>
+              <th>Hoạt động</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
               <th>S.N.</th>
-              <th>Title</th>
-              <th>Price</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>Tiêu đề</th>
+              <th>Giá</th>
+              <th>Trạng thái</th>
+              <th>Hoạt động</th>
               </tr>
           </tfoot>
           <tbody>
@@ -81,7 +81,7 @@
         </table>
         <span style="float:right">{{$shippings->links()}}</span>
         @else
-          <h6 class="text-center">No shippings found!!! Please create shipping</h6>
+          <h6 class="text-center">Không tìm thấy shippings !!! Vui lòng tạo vận chuyển</h6>
         @endif
       </div>
     </div>
@@ -144,8 +144,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: "Bạn có chắc?",
+                    text: "Sau khi xóa, bạn sẽ không thể khôi phục dữ liệu này!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -154,7 +154,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal("Dữ liệu của bạn an toàn!");
                     }
                 });
           })
