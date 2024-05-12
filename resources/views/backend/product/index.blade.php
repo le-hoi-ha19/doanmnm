@@ -33,7 +33,7 @@
               <th>Hoạt động</th>
             </tr>
           </thead>
-          <tfoot>
+          {{-- <tfoot>
             <tr>
               <th>S.N.</th>
               <th>Tiêu đề</th>
@@ -49,7 +49,7 @@
               <th>Trạng thái</th>
               <th>Hoạt động</th>
             </tr>
-          </tfoot>
+          </tfoot> --}}
           <tbody>
 
             @foreach($products as $product)
