@@ -107,8 +107,8 @@
                             @auth
                                 <div class="shopping-item">
                                     <div class="dropdown-cart-header">
-                                        <span>{{count(Helper::getAllProductFromWishlist())}} Items</span>
-                                        <a href="{{route('wishlist')}}">View Wishlist</a>
+                                        <span>{{count(Helper::getAllProductFromWishlist())}} Mặt hàng</span>
+                                        <a href="{{route('wishlist')}}">Xem yêu thích</a>
                                     </div>
                                     <ul class="shopping-list">
                                         {{-- {{Helper::getAllProductFromCart()}} --}}
@@ -126,10 +126,10 @@
                                     </ul>
                                     <div class="bottom">
                                         <div class="total">
-                                            <span>Total</span>
+                                            <span>Tổng tiền</span>
                                             <span class="total-amount">${{number_format(Helper::totalWishlistPrice(),2)}}</span>
                                         </div>
-                                        <a href="{{route('cart')}}" class="btn animate">Cart</a>
+                                        <a href="{{route('cart')}}" class="btn animate">Xem giỏ hàng</a>
                                     </div>
                                 </div>
                             @endauth
@@ -144,8 +144,8 @@
                             @auth
                                 <div class="shopping-item">
                                     <div class="dropdown-cart-header">
-                                        <span>{{count(Helper::getAllProductFromCart())}} Items</span>
-                                        <a href="{{route('cart')}}">View Cart</a>
+                                        <span>{{count(Helper::getAllProductFromCart())}} Mặt hàng</span>
+                                        <a href="{{route('cart')}}">Xem giỏ hàng</a>
                                     </div>
                                     <ul class="shopping-list">
                                         {{-- {{Helper::getAllProductFromCart()}} --}}
@@ -163,10 +163,10 @@
                                     </ul>
                                     <div class="bottom">
                                         <div class="total">
-                                            <span>Total</span>
+                                            <span>Tổng tiền</span>
                                             <span class="total-amount">${{number_format(Helper::totalCartPrice(),2)}}</span>
                                         </div>
-                                        <a href="{{route('checkout')}}" class="btn animate">Checkout</a>
+                                        <a href="{{route('checkout')}}" class="btn animate">Thanh toán</a>
                                     </div>
                                 </div>
                             @endauth

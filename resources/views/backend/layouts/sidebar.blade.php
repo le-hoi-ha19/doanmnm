@@ -15,7 +15,7 @@
     <li class="nav-item active">
       <a class="nav-link" href="{{route('admin')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <span>Bảng điều khiển</span></a>
     </li>
 
     <!-- Divider -->
@@ -41,9 +41,9 @@
       </a>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Banner Options:</h6>
+          <h6 class="collapse-header">Tùy chọn banner:</h6>
           <a class="collapse-item" href="{{route('banner.index')}}">Banners</a>
-          <a class="collapse-item" href="{{route('banner.create')}}">Add Banners</a>
+          <a class="collapse-item" href="{{route('banner.create')}}">Thêm Banners</a>
         </div>
       </div>
     </li>
