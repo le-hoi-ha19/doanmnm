@@ -17,7 +17,7 @@
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                         <p>{!! html_entity_decode($banner->description) !!}</p>
-                        <a class="btn btn-lg ws-btn wow fadeInUpBig" href="{{route('product-grids')}}" role="button">Shop Now<i class="far fa-arrow-alt-circle-right"></i></i></a>
+                        <a class="btn btn-lg ws-btn wow fadeInUpBig" href="{{route('product-grids')}}" role="button">Mua ngay<i class="far fa-arrow-alt-circle-right"></i></i></a>
                     </div>
                 </div>
             @endforeach
@@ -55,7 +55,7 @@
                                 @endif
                                 <div class="content">
                                     <h3>{{$cat->title}}</h3>
-                                        <a href="{{route('product-cat',$cat->slug)}}">Discover Now</a>
+                                        <a href="{{route('product-cat',$cat->slug)}}">Khám phá ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Trending Item</h2>
+                        <h2>Mặt hàng xu hướng</h2>
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@
                                                     <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}" ><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
                                                 </div>
                                                 <div class="product-action-2">
-                                                    <a title="Add to cart" href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
+                                                    <a title="Add to cart" href="{{route('add-to-cart',$product->slug)}}">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,7 +183,7 @@
                             <div class="content">
                                 <p>{{$data->cat_info['title']}}</p>
                                 <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
-                                <a href="{{route('product-detail',$data->slug)}}">Shop Now</a>
+                                <a href="{{route('product-detail',$data->slug)}}">Mua ngay</a>
                             </div>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>Hot Item</h2>
+                    <h2>Mặt hàng hot</h2>
                 </div>
             </div>
         </div>
@@ -228,7 +228,7 @@
                                         <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}" ><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
                                     </div>
                                     <div class="product-action-2">
-                                        <a href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
+                                        <a href="{{route('add-to-cart',$product->slug)}}">Thêm vào giỏ hàng</a>
                                     </div>
                                 </div>
                             </div>
@@ -261,7 +261,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="shop-section-title">
-                            <h1>Latest Items</h1>
+                            <h1>Mặt hàng mới về</h1>
                         </div>
                     </div>
                 </div>
@@ -309,7 +309,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>From Our Blog</h2>
+                    <h2>Bài viết của chúng tôi</h2>
                 </div>
             </div>
         </div>
@@ -323,7 +323,7 @@
                             <div class="content">
                                 <p class="date">{{$post->created_at->format('d M , Y. D')}}</p>
                                 <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>
-                                <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Continue Reading</a>
+                                <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Xem bài viết</a>
                             </div>
                         </div>
                         <!-- End Single Blog  -->
@@ -344,8 +344,8 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-rocket"></i>
-                    <h4>Free shiping</h4>
-                    <p>Orders over $100</p>
+                    <h4>MIỄN PHÍ VẬN CHUYỂN</h4>
+                    <p>Đơn hàng trên $100</p>
                 </div>
                 <!-- End Single Service -->
             </div>
@@ -353,8 +353,8 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-reload"></i>
-                    <h4>Free Return</h4>
-                    <p>Within 30 days returns</p>
+                    <h4>Hoàn trả miễn phí</h4>
+                    <p>Trong vòng 30 ngày trả lại</p>
                 </div>
                 <!-- End Single Service -->
             </div>
@@ -362,8 +362,8 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-lock"></i>
-                    <h4>Sucure Payment</h4>
-                    <p>100% secure payment</p>
+                    <h4>Thanh toán an toàn</h4>
+                    <p>Thanh toán an toàn 100%</p>
                 </div>
                 <!-- End Single Service -->
             </div>
@@ -371,8 +371,8 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-tag"></i>
-                    <h4>Best Peice</h4>
-                    <p>Guaranteed price</p>
+                    <h4>Giá tốt nhất</h4>
+                    <p>Giá đảm bảo</p>
                 </div>
                 <!-- End Single Service -->
             </div>

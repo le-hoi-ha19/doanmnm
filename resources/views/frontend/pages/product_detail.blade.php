@@ -24,8 +24,8 @@
 					<div class="col-12">
 						<div class="bread-inner">
 							<ul class="bread-list">
-								<li><a href="{{route('home')}}">Home<i class="ti-arrow-right"></i></a></li>
-								<li class="active"><a href="">Shop Details</a></li>
+								<li><a href="{{route('home')}}">Trang chủ<i class="ti-arrow-right"></i></a></li>
+								<li class="active"><a href="">Chi tiết sản phẩm</a></li>
 							</ul>
 						</div>
 					</div>
@@ -120,7 +120,7 @@
 												<form action="{{route('single-add-to-cart')}}" method="POST">
 													@csrf 
 													<div class="quantity">
-														<h6>Quantity :</h6>
+														<h6>Số lượng :</h6>
 														<!-- Input Order -->
 														<div class="input-group">
 															<div class="button minus">
@@ -139,16 +139,16 @@
 													<!--/ End Input Order -->
 													</div>
 													<div class="add-to-cart mt-4">
-														<button type="submit" class="btn">Add to cart</button>
+														<button type="submit" class="btn">Thêm vào giỏ hàng</button>
 														<a href="{{route('add-to-wishlist',$product_detail->slug)}}" class="btn min"><i class="ti-heart"></i></a>
 													</div>
 												</form>
 
-												<p class="cat">Category :<a href="{{route('product-cat',$product_detail->cat_info['slug'])}}">{{$product_detail->cat_info['title']}}</a></p>
+												<p class="cat">Loại mặt hàng :<a href="{{route('product-cat',$product_detail->cat_info['slug'])}}">{{$product_detail->cat_info['title']}}</a></p>
 												@if($product_detail->sub_cat_info)
-												<p class="cat mt-1">Sub Category :<a href="{{route('product-sub-cat',[$product_detail->cat_info['slug'],$product_detail->sub_cat_info['slug']])}}">{{$product_detail->sub_cat_info['title']}}</a></p>
+												<p class="cat mt-1">Mặt hàng phụ :<a href="{{route('product-sub-cat',[$product_detail->cat_info['slug'],$product_detail->sub_cat_info['slug']])}}">{{$product_detail->sub_cat_info['title']}}</a></p>
 												@endif
-												<p class="availability">Stock : @if($product_detail->stock>0)<span class="badge badge-success">{{$product_detail->stock}}</span>@else <span class="badge badge-danger">{{$product_detail->stock}}</span>  @endif</p>
+												<p class="availability">Mặt hàng có sẵn : @if($product_detail->stock>0)<span class="badge badge-success">{{$product_detail->stock}}</span>@else <span class="badge badge-danger">{{$product_detail->stock}}</span>  @endif</p>
 											</div>
 											<!--/ End Product Buy -->
 										</div>
@@ -160,8 +160,8 @@
 											<div class="nav-main">
 												<!-- Tab Nav -->
 												<ul class="nav nav-tabs" id="myTab" role="tablist">
-													<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a></li>
-													<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews</a></li>
+													<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#description" role="tab">Mô tả</a></li>
+													<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews" role="tab">đánh giá</a></li>
 												</ul>
 												<!--/ End Tab Nav -->
 											</div>
@@ -188,10 +188,10 @@
 																<!-- Review -->
 																<div class="comment-review">
 																	<div class="add-review">
-																		<h5>Add A Review</h5>
-																		<p>Your email address will not be published. Required fields are marked</p>
+																		<h5> Thêm một đánh giá</h5>
+																		<p>Địa chỉ email của bạn sẽ không được công bố. Các trường bắt buộc được đánh dấu</p>
 																	</div>
-																	<h4>Your Rating <span class="text-danger">*</span></h4>
+																	<h4>Số điểm đánh giá <span class="text-danger">*</span></h4>
 																	<div class="review-inner">
 																			<!-- Form -->
 																@auth
@@ -221,20 +221,20 @@
                                                                         </div>
 																		<div class="col-lg-12 col-12">
 																			<div class="form-group">
-																				<label>Write a review</label>
+																				<label>Viết một đánh giá</label>
 																				<textarea name="review" rows="6" placeholder="" ></textarea>
 																			</div>
 																		</div>
 																		<div class="col-lg-12 col-12">
 																			<div class="form-group button5">	
-																				<button type="submit" class="btn">Submit</button>
+																				<button type="submit" class="btn">Gửi</button>
 																			</div>
 																		</div>
 																	</div>
 																</form>
 																@else 
 																<p class="text-center p-5">
-																	You need to <a href="{{route('login.form')}}" style="color:rgb(54, 54, 204)">Login</a> OR <a style="color:blue" href="{{route('register.form')}}">Register</a>
+																	Bạn cần phải <a href="{{route('login.form')}}" style="color:rgb(54, 54, 204)">Đăng nhập</a> OR <a style="color:blue" href="{{route('register.form')}}">Đăng ký</a>
 
 																</p>
 																<!--/ End Form -->
@@ -250,8 +250,8 @@
 																				$rate +=$rate
 																			}
 																		@endphp --}}
-																		<h4>{{ceil($product_detail->getReview->avg('rate'))}} <span>(Overall)</span></h4>
-																		<span>Based on {{$product_detail->getReview->count()}} Comments</span>
+																		<h4>{{ceil($product_detail->getReview->avg('rate'))}} <span>(Tổng quan)</span></h4>
+																		<span>Dựa trên {{$product_detail->getReview->count()}} Bình luận</span>
 																	</div>
 																	@foreach($product_detail['getReview'] as $data)
 																	<!-- Single Rating -->
@@ -308,7 +308,7 @@
             <div class="row">
 				<div class="col-12">
 					<div class="section-title">
-						<h2>Related Products</h2>
+						<h2>Sản phẩm tương tự</h2>
 					</div>
 				</div>
             </div>
@@ -419,7 +419,7 @@
                             <div class="size">
                                 <div class="row">
                                     <div class="col-lg-6 col-12">
-                                        <h5 class="title">Size</h5>
+                                        <h5 class="title">size</h5>
                                         <select>
                                             <option selected="selected">s</option>
                                             <option>m</option>
