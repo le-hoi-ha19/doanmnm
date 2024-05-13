@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                 @endforeach
-                            @elseproducts
+                            @else
                                     <h4 class="text-warning" style="margin:100px auto;">kHÔNG CÓ SẢN PHẨM NÀO</h4>
                             @endif
 
