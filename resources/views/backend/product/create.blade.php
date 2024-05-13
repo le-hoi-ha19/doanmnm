@@ -9,7 +9,7 @@
         {{csrf_field()}}
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Tiêu đề <span class="text-danger">*</span></label>
-          <input id="inputTitle" type="text" name="title" placeholder="Nhập tiêu đề"  value="{{old('title')}}" class="form-control">
+          <input id="inputTitle" type="text" name="title" placeholder="Nhập tiêu đề"  value="{{old('title')}}" class="form-control" required>
           @error('title')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -17,15 +17,15 @@
 
         <div class="form-group">
           <label for="summary" class="col-form-label">Tóm tắt <span class="text-danger">*</span></label>
-          <textarea class="form-control" id="summary" name="summary">{{old('summary')}}</textarea>
+          <textarea class="form-control" id="summary" name="summary" >{{old('summary')}}</textarea>
           @error('summary')
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
 
         <div class="form-group">
-          <label for="description" class="col-form-label">Mô tả</label>
-          <textarea class="form-control" id="description" name="description">{{old('description')}}</textarea>
+          <label for="description" class="col-form-label" >Mô tả</label>
+          <textarea class="form-control" id="description" name="description" >{{old('description')}}</textarea>
           @error('description')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -40,7 +40,7 @@
 
         <div class="form-group">
           <label for="cat_id">Danh mục <span class="text-danger">*</span></label>
-          <select name="cat_id" id="cat_id" class="form-control">
+          <select name="cat_id" id="cat_id" class="form-control" required>
               <option value="">--Chọn danh mục--</option>
               @foreach($categories as $key=>$cat_data)
                   <option value='{{$cat_data->id}}'>{{$cat_data->title}}</option>
@@ -50,7 +50,7 @@
 
         <div class="form-group d-none" id="child_cat_div">
           <label for="child_cat_id">Loại Danh mục</label>
-          <select name="child_cat_id" id="child_cat_id" class="form-control">
+          <select name="child_cat_id" id="child_cat_id" class="form-control" required>
               <option value="">--Chọn--</option>
               {{-- @foreach($parent_cats as $key=>$parent_cat)
                   <option value='{{$parent_cat->id}}'>{{$parent_cat->title}}</option>
@@ -60,7 +60,7 @@
 
         <div class="form-group">
           <label for="price" class="col-form-label">Giá(NRS) <span class="text-danger">*</span></label>
-          <input id="price" type="number" name="price" placeholder="Enter price"  value="{{old('price')}}" class="form-control">
+          <input id="price" type="number" name="price" placeholder="Enter price"  value="{{old('price')}}" class="form-control" required>
           @error('price')
           <span class="text-danger">{{$message}}</span>
           @enderror
@@ -68,14 +68,14 @@
 
         <div class="form-group">
           <label for="discount" class="col-form-label">Giảm giá(%)</label>
-          <input id="discount" type="number" name="discount" min="0" max="100" placeholder="Enter discount"  value="{{old('discount')}}" class="form-control">
+          <input id="discount" type="number" name="discount" min="0" max="100" placeholder="Enter discount"  value="{{old('discount')}}" class="form-control" required>
           @error('discount')
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
         <div class="form-group">
           <label for="size">Size</label>
-          <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
+          <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true" required>
               <option value="">--Chọn Size--</option>
               <option value="S">Nhỏ (S)</option>
               <option value="M">Vừa (M)</option>
@@ -88,7 +88,7 @@
           <label for="brand_id">Thương hiệu</label>
           {{-- {{$brands}} --}}
 
-          <select name="brand_id" class="form-control">
+          <select name="brand_id" class="form-control" required>
               <option value="">--Chọn thương hiệu--</option>
              @foreach($brands as $brand)
               <option value="{{$brand->id}}">{{$brand->title}}</option>
@@ -98,7 +98,7 @@
 
         <div class="form-group">
           <label for="condition">Tình trạng</label>
-          <select name="condition" class="form-control">
+          <select name="condition" class="form-control" required>
               <option value="">--Chọn tình trạng--</option>
               <option value="default">Chi tiết</option>
               <option value="new">Mới</option>
@@ -108,7 +108,7 @@
 
         <div class="form-group">
           <label for="stock">Số lượng <span class="text-danger">*</span></label>
-          <input id="quantity" type="number" name="stock" min="0" placeholder="Nhập số lượng"  value="{{old('stock')}}" class="form-control">
+          <input id="quantity" type="number" name="stock" min="0" placeholder="Nhập số lượng"  value="{{old('stock')}}" class="form-control" required>
           @error('stock')
           <span class="text-danger">{{$message}}</span>
           @enderror
