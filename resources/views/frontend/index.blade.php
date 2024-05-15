@@ -47,9 +47,9 @@
                     @if($cat->is_parent==1)
                         <!-- Single Banner  -->
                         <div class="col-lg-4 col-md-6 col-12">
-                            <div class="single-banner">
+                            <div class="single-banner" >
                                 @if($cat->photo)
-                                    <img src="{{$cat->photo}}" alt="{{$cat->photo}}">
+                                    <img src="{{$cat->photo}}" alt="{{$cat->photo}}" style="height:300px">
                                 @else
                                     <img src="https://via.placeholder.com/600x370" alt="#">
                                 @endif

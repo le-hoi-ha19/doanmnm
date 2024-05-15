@@ -4,12 +4,12 @@
     <button id="sidebarToggleTop" class="btn btn-link  rounded-circle mr-3">
       <i class="fa fa-bars"></i>
     </button>
-    <a href="{{route('storage.link')}}"  class="btn btn-outline-warning btn-sm mr-3">
+    <!-- <a href="{{route('storage.link')}}"  class="btn btn-outline-warning btn-sm mr-3">
         Storage Link
     </a>
     <a href="{{route('cache.clear')}}"  class="btn btn-outline-danger btn-sm mr-3">
       Cache Clear
-    </a>
+    </a> -->
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -36,23 +36,24 @@
 
 
 
+
+      <!-- Nav Item - Alerts -->
+      <li class="nav-item dropdown no-arrow mx-1 invisible"  >
+       @include('backend.notification.show')
+      </li>
+
+      <!-- Nav Item - Messages -->
+      <li class="nav-item dropdown no-arrow mx-1 invisible" id="messageT" data-url="{{route('messages.five')}}">
+        @include('backend.message.message')
+      </li>
+
+        
       {{-- Home page --}}
       <li class="nav-item dropdown no-arrow mx-1">
         <a class="nav-link dropdown-toggle" href="{{route('home')}}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="home"  role="button">
           <i class="fas fa-home fa-fw"></i>
         </a>
       </li>
-
-      <!-- Nav Item - Alerts -->
-      <li class="nav-item dropdown no-arrow mx-1">
-       @include('backend.notification.show')
-      </li>
-
-      <!-- Nav Item - Messages -->
-      <li class="nav-item dropdown no-arrow mx-1" id="messageT" data-url="{{route('messages.five')}}">
-        @include('backend.message.message')
-      </li>
-
       <div class="topbar-divider d-none d-sm-block"></div>
 
       <!-- Nav Item - User Information -->

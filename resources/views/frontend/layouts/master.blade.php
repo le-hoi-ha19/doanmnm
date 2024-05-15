@@ -4,7 +4,6 @@
 	@include('frontend.layouts.head')	
 </head>
 <body class="js">
-	
 	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader-inner">
